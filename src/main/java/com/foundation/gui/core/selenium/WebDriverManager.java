@@ -24,7 +24,7 @@ public class WebDriverManager {
     }
 
     private void initialize() {
-        webDriver = getWebDriver(webDriverConfig.getNavigator());
+        webDriver = getWebDriver(webDriverConfig.getBrowser());
         webDriver.manage()
                 .timeouts()
                 .implicitlyWait(webDriverConfig.getImplicitWaitTime(), TimeUnit.SECONDS);

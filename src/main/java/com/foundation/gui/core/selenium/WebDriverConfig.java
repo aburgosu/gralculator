@@ -8,7 +8,7 @@ public class WebDriverConfig {
 
     private int implicitWaitTime;
     private int explicitWaitTime;
-    private String navigator;
+    private String browser;
     private static WebDriverConfig readConfiguration;
     private Properties properties;
     private InputStream inputProperties;
@@ -33,7 +33,7 @@ public class WebDriverConfig {
             properties.load(inputProperties);
             implicitWaitTime = Integer.parseInt(properties.getProperty("implicitWaitTime"));
             explicitWaitTime = Integer.parseInt(properties.getProperty("explicitWaitTime"));
-            navigator = properties.getProperty("navigator");
+            browser = properties.getProperty("browser");
         } catch (Exception e) {
             try {
                 inputProperties.close();
@@ -52,7 +52,7 @@ public class WebDriverConfig {
         return explicitWaitTime;
     }
 
-    public String getNavigator() {
-        return navigator;
+    public String getBrowser() {
+        return browser;
     }
 }
