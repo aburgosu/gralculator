@@ -15,8 +15,6 @@ package com.foundation.gui.core.selenium.webdrivers;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
 
 /**
  * Chrome class.
@@ -32,7 +30,6 @@ public class Chrome {
    */
     public WebDriver initDriver() {
         ChromeDriverManager.getInstance().version("76.0.3809.126").setup();
-        ChromeOptions chromeOptions = new ChromeOptions();
-        return new ChromeDriver(chromeOptions);
+        return new ChromeDriver();
     }
 }
